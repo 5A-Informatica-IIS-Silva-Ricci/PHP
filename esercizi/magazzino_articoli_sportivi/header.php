@@ -1,7 +1,6 @@
 <?php
-
-use mas\config\ViewsConfig;
-
+namespace mas;
+include "autoloader.php";
 ?>
 <!doctype html>
 <html lang="en">

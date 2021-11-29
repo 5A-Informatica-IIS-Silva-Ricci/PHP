@@ -1,9 +1,7 @@
 <?php
+namespace mas;
+include "autoloader.php";
 
-use mas\logica\handlers\ArticoliHandler;
-use mas\template\TemplateUtil;
-
-include "../template/header.php";
 TemplateUtil::renderPageTitle("Gestione articoli")
 ?>
 <div>

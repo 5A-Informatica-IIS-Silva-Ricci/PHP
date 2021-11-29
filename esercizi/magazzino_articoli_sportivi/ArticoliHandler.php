@@ -1,9 +1,7 @@
 <?php
 
-namespace mas\logica\handlers;
-
-use mas\entities\Articolo;
-use mas\logica\db\ArticoliManager;
+namespace mas;
+include "autoloader.php";
 
 class ArticoliHandler
 {

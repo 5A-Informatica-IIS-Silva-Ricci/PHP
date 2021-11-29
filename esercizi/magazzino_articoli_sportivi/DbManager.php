@@ -1,8 +1,8 @@
 <?php
 
-namespace mas\logica\db;
+namespace mas;
+include "autoloader.php";
 
-use mas\config\DbConfig;
 use mysqli;
 
 class DbManager {

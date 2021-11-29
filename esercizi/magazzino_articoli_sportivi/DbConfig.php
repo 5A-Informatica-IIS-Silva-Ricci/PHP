@@ -1,6 +1,7 @@
 <?php
 
-namespace mas\config;
+namespace mas;
+include "autoloader.php";
 
 class DbConfig
 {

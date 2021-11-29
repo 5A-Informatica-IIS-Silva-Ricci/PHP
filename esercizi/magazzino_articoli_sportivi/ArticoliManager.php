@@ -1,8 +1,7 @@
 <?php
 
-namespace mas\logica\db;
-
-use mas\config\DbConfig;
+namespace mas;
+include "autoloader.php";
 
 class ArticoliManager extends EntitaGenericaManager {
     public function __construct()

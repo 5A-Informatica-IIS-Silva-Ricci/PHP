@@ -1,6 +1,8 @@
 <?php
+namespace mas;
+include "autoloader.php";
 
-include "../template/header.php";
+include "header.php";
 ?>
     <div>
 

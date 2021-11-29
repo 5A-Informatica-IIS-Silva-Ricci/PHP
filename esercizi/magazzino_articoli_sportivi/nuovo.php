@@ -1,9 +1,8 @@
 <?php
 
-use mas\logica\handlers\ArticoliHandler;
-use mas\template\TemplateUtil;
+namespace mas;
+include "autoloader.php";
 
-include "../template/header.php";
 TemplateUtil::renderPageTitle("Nuovo articolo");
 
 if (!empty($_POST))

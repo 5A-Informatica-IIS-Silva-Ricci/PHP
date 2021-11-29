@@ -1,6 +1,7 @@
 <?php
 
-namespace mas\entities;
+namespace mas;
+include "autoloader.php";
 
 class Articolo
 {

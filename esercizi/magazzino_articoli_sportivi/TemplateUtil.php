@@ -1,6 +1,7 @@
 <?php
 
-namespace mas\template;
+namespace mas;
+include "autoloader.php";
 
 class TemplateUtil
 {

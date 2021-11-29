@@ -1,6 +1,7 @@
 <?php
 
-namespace mas\logica\db;
+namespace mas;
+include "autoloader.php";
 
 use mysqli;
 
