@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS donazioni(
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    importo INT NOT NULL,
+    ente VARCHAR(30) NOT NULL,
+    anno INT NOT NULL,
+    nota VARCHAR(200)
+);

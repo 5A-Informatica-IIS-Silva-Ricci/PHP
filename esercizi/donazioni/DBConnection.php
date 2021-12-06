@@ -1,12 +1,9 @@
 <?php
-
-namespace mas;
 include "autoloader.php";
 
-use mysqli;
-
-class DbManager {
-    private static DbManager $instance;
+class DBConnection
+{
+    private static DBConnection $instance;
 
     private mysqli $connection;
 
@@ -15,20 +12,20 @@ class DbManager {
         $this->setupDb();
     }
 
-    public static function getInstance() : DbManager {
+    public static function getInstance() : DBConnection {
         if (!isset(self::$instance))
-            self::$instance = new DbManager();
+            self::$instance = new DBConnection();
 
         return self::$instance;
     }
 
 
     private function initConnection() {
-        $this->connection = new mysqli(DbConfig::DATABASE, DbConfig::USER, DbConfig::PASSWORD, DbConfig::DATABASE);
+        $this->connection = new mysqli(Config::dbHost, Config::dbUser, Config::dbPassword, Config::dbName);
     }
 
     private function setupDb() {
-        $querySetup = file_get_contents("../../database/db_init.sql");
+        $querySetup = file_get_contents("./db_scripts/db_init.sql");
         $this->connection->multi_query($querySetup);
     }
 

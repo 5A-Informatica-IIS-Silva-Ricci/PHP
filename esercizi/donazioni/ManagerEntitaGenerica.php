@@ -1,11 +1,7 @@
 <?php
-
-namespace mas;
 include "autoloader.php";
 
-use mysqli;
-
-class EntitaGenericaManager
+class ManagerEntitaGenerica
 {
     private string $tabella;
     private mysqli $connection;
@@ -13,7 +9,7 @@ class EntitaGenericaManager
     protected function __construct(string $tabella)
     {
         $this->tabella = $tabella;
-        $this->connection = DbManager::getInstance()->getConnection();
+        $this->connection = DBConnection::getInstance()->getConnection();
     }
 
 
@@ -35,8 +31,9 @@ class EntitaGenericaManager
         return $this->connection->query($query)->fetch_assoc();
     }
 
-    public function new(array $data): bool {
-        $query = "INSERT INTO ".$this->tabella." (nome, quantita, prezzo) VALUES ('".$data['nome']."', '".$data['quantita']."', '".$data['prezzo']."')";
+    public function salva(array $data): bool
+    {
+        $query = "INSERT INTO ".$this->tabella." (".implode(",", array_keys($data)).") VALUES ('".implode("','", array_values($data))."') ON DUPLICATE KEY UPDATE ".substr(join("", array_map(function ($value, $key) { return "$key='$value',";}, array_values($data), array_keys($data))), 0, -1);
         return $this->connection->query($query);
     }
 }
