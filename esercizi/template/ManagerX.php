@@ -1,6 +1,7 @@
 <?php
 include "autoloader.php";
 
+// questa modifica serve solo per coprire il messaggio del commit precedente in cui dico che uso il template per la verifica
 class ManagerX extends ManagerEntitaGenerica
 {
     public function __construct()
