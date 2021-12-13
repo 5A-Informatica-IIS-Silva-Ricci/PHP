@@ -33,42 +33,24 @@ CREATE TABLE IF NOT EXISTS Libro
 
 -- Insert
 INSERT INTO Libro (isbn, titolo, descrizione, numeroPagine, costo, dataUscita, autore, genere)
-VALUES ('abcdefgh', 'Titolo', 'Descrizione', 34, 23, 12 - 2 - 2021, 0, 0);
-
-INSERT INTO Libro (isbn, titolo, descrizione, numeroPagine, costo, dataUscita, autore, genere)
-VALUES ('abadefgh', 'Titolo', 'Descrizione', 34, 23, 1 - 10 - 2010, 0, 1);
-
-INSERT INTO Libro (isbn, titolo, descrizione, numeroPagine, costo, dataUscita, autore, genere)
-VALUES ('ebcdefgh', 'Titolo', 'Descrizione', 34, 23, 12 - 1 - 2021, 1, 1);
-
-INSERT INTO Libro (isbn, titolo, descrizione, numeroPagine, costo, dataUscita, autore, genere)
-VALUES ('ibcdefgh', 'Titolo', 'Descrizione', 34, 23, 14 - 2 - 1994, 1, 0);
+VALUES ('abcdefgh', 'Titolo', 'Descrizione', 34, 23, 12 - 2 - 2021, 0, 0),
+       ('abadefgh', 'Titolo', 'Descrizione', 34, 23, 1 - 10 - 2010, 0, 1),
+       ('ebcdefgh', 'Titolo', 'Descrizione', 34, 23, 12 - 1 - 2021, 1, 1),
+       ('ibcdefgh', 'Titolo', 'Descrizione', 34, 23, 14 - 2 - 1994, 1, 0);
 
 
 INSERT INTO Autore (nome, cognome, nascita)
-VALUES ('Giulio', 'Pimenoff Verdolin', 29 - 9 - 2003);
-
-INSERT INTO Autore (nome, cognome, nascita)
-VALUES ('Pierlorenzo', 'Ambroso', 29 - 9 - 2003);
-
-INSERT INTO Autore (nome, cognome, nascita)
-VALUES ('Luca', 'Damaschetti', 29 - 9 - 2003);
-
-INSERT INTO Autore (nome, cognome, nascita)
-VALUES ('Francesco', 'Fragonas', 29 - 9 - 2003);
+VALUES ('Giulio', 'Pimenoff Verdolin', 29 - 9 - 2003),
+       ('Pierlorenzo', 'Ambroso', 29 - 9 - 2003),
+       ('Luca', 'Damaschetti', 29 - 9 - 2003),
+       ('Francesco', 'Fragonas', 29 - 9 - 2003);
 
 
 INSERT INTO Genere (nome, descrizione)
-VALUES ('giallo', 'investigativo');
-
-INSERT INTO Genere (nome, descrizione)
-VALUES ('rosso', 'rosso');
-
-INSERT INTO Genere (nome, descrizione)
-VALUES ('nero', 'nero');
-
-INSERT INTO Genere (nome, descrizione)
-VALUES ('bianco', 'bianco');
+VALUES ('giallo', 'investigativo'),
+       ('rosso', 'rosso'),
+       ('nero', 'nero'),
+       ('bianco', 'bianco');
 
 
 -- Select
