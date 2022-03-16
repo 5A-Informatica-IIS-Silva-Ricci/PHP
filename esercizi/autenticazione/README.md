@@ -1,0 +1,5 @@
+- Home.php
+- Login.php
+- Registrazione.php
+- Riservata.php
+- Logout.php
